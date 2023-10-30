@@ -1,0 +1,12 @@
+{
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/fhir_to_brics/",
+        "${workspaceFolder}/"
+    ],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/fhir_to_brics/"
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}/fhir_to_brics/",
+    "python.envFile": "${workspaceFolder}/.env",
+    "jupyter.notebookFileRoot": "${workspaceFolder}/"
+  }

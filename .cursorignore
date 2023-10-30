@@ -1,0 +1,12 @@
+/notes
+/scratch
+/prompts
+/examples
+/env
+/brics_fhir
+/templates
+/.vscode
+/fhir_to_brics/templates
+/fhir_to_brics/definitions
+/fhir_to_brics/fhir.schema.json
+/fhir_to_brics/resources
