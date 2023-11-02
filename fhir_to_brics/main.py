@@ -14,9 +14,6 @@ from fhir_to_brics.utils import (
 # Initialize logging
 logging.basicConfig(level=logging.INFO)
 
-load_dotenv()
-UMLS_API_KEY = os.getenv("UMLS_API_KEY")
-
 
 def main(
     profile_startswith="us-core",
@@ -84,7 +81,9 @@ def main(
 
 
 if __name__ == "__main__":
-    profile_startswith = "us-core"
-    resource_name = "patient"
-    extension_Id_startswith = "Extension"
+    load_dotenv()  # Load environment variables from .env file
+    profile_startswith = os.getenv("PROFILE_STARTSWITH", "us-core")
+    resource_name = os.getenv("RESOURCE_NAME", "patient")
+    extension_Id_startswith = os.getenv("EXTENSION_ID_STARTSWITH", "Extension")
+    UMLS_API_KEY = os.getenv("UMLS_API_KEY")
     main(profile_startswith, resource_name, extension_Id_startswith)
